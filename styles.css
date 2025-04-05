@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+div#mainContainer {
+    vertical-align: top;
+}
+
+div#mainContainer > div {
+    display: inline-block;
+}
+
+div#widgets {
+    width: 700px;
+}
+
+div#rightBlock {
+    vertical-align: top;
+    padding: 10px;
+}
+
+div#widgets div, div#legend div {
+    border: 1px dashed rgba(0, 0, 0, 0.544);
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
+}
+
+div#legend div {
+    margin: 10px 0px;
+    padding: 5px 8px;
+}
+
+div#widgets div:not([widget]), div#legend div:not([widget]) {
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.1) 0,
+        rgba(255, 255, 255, 0.1) 10px,
+        rgba(173, 173, 173, 0.1) 10px,
+        rgba(173, 173, 173, 0.1) 20px
+    );
+    background-clip: padding-box;
+}
+
+div#widgets div[widget], div#legend div[widget] {
+    background-image: repeating-linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.2) 0,
+        rgba(255, 255, 255, 0.2) 10px,
+        rgba(0, 190, 0, 0.2) 10px,
+        rgba(0, 190, 0, 0.2) 20px
+    );
+    background-clip: padding-box;
+}
+
+div#widgets div.selected, div#legend div.selected {
+    /*outline: 2px solid blue;*/
+    border: 1px dashed blue;
+    outline: 1px solid rgba(0, 0, 255, 0.631);
+}
+
+div#widgets div.widget-initializing, div#legend div.widget-initializing {
+    background-color: rgb(173, 173, 173);
+}
+
+div#widgets div.widget-done, div#legend div.widget-done {
+    background-color: rgb(32, 149, 32);
+}
+
+div#widgets div.widget-failed, div#legend div.widget-failed {
+    background-color: red;
+}
+
+div#widgets div.flexWidgets {
+    display: flex;
+    flex-direction: row;
+}
+
+div#widgets div[widget="EighthWidget"], div#widgets div[widget="NinthWidget"] {
+    flex: 0 50%;
+}

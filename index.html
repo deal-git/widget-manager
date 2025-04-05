@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Widget Library Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="widgets">
+            <div id="widgets-root">
+                <div widget="FirstWidget" id="widget1">
+                    <div widget="SecondWidget" id="widget2"></div>
+                </div>
+                <div></div>
+                <div widget="ThirdWidget"></div>
+                <div widget="ForthWidget">
+                    <div>
+                        <div widget="FifthWidget">
+                            <div widget="SixthWidget"></div>
+                            <div id="nodeWithoutWidget"></div>
+                        </div>
+                        <div widget="SeventhWidget"></div>
+                    </div>
+                </div>
+                <div></div>
+                <div class="flexWidgets">
+                    <div widget="EighthWidget"></div>
+                    <div widget="NinthWidget"></div>
+                </div>
+            </div>
+        </div>
+        <div id="rightBlock">
+            <div id="buttons">
+                <button id="init">Init</button>
+                <button id="destroy">Destroy</button>
+                <button id="done">Done</button>
+                <button id="fail">Fail</button>
+                <br><br>
+                <input type="checkbox" id="autoSelectNextNode">Auto select next widget node</input>
+            </div>
+            <div id="legend">
+                <br>
+                <span>Legend:</span>
+                <br>
+                <div>Node without widget</div>
+                <div widget="widget">Node with widget</div>
+                <div widget="widget" class="selected">Selected node</div>
+                <div widget="widget" class="widget-initializing">Widget is initializing</div>
+                <div widget="widget" class="widget-done">Initialization done</div>
+                <div widget="widget" class="widget-failed">Initialization failed</div>
+            </div>
+        </div>
+    </div>
+    <div id="info"></div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

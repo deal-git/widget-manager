@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^16.6.0"
+  },
+  "name": "widgets_test",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Widgets test",
+  "main": "srv.js",
+  "scripts": {
+    "start": "node srv.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "keywords": [
+    "widgets",
+    "test"
+  ],
+  "author": "deal"
+}
