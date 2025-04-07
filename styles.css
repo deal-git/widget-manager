@@ -19,7 +19,12 @@ div#widgets {
 
 div#rightBlock {
     vertical-align: top;
-    padding: 10px;
+    padding: 10px 3px;
+}
+
+div#buttons button {
+    min-width: 75px;
+    margin: 0 5px;
 }
 
 div#widgets div, div#legend div {
@@ -33,6 +38,10 @@ div#widgets div, div#legend div {
          1px -1px 0 #fff,
         -1px  1px 0 #fff,
          1px  1px 0 #fff;
+}
+
+div#legend {
+    padding: 0 3px;
 }
 
 div#legend div {
@@ -63,7 +72,6 @@ div#widgets div[widget], div#legend div[widget] {
 }
 
 div#widgets div.selected, div#legend div.selected {
-    /*outline: 2px solid blue;*/
     border: 1px dashed blue;
     outline: 1px solid rgba(0, 0, 255, 0.631);
 }

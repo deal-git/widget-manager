@@ -10,7 +10,7 @@
                         selectedNodes[0].click();
                     }
                 }
-            }, 50);
+            }, 250);
         }
     });
     
@@ -75,7 +75,7 @@
                 } else if (initializedWidgetsCount) {
                     console.log(`Initialization was successful for ${initializedWidgetsCount} widgets`);
                 } else {
-                    console.log('Node without widget');
+                    console.log('Nodes without widgets or all nodes already were initialized or failed');
                 }
             });
         }
